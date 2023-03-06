@@ -1,0 +1,260 @@
+
+:root {
+  --black: #181823;
+  --blue: #537fe7;
+  --lightBlue: #c0eef2;
+  --paleBlue: #e9f8f9;
+  --darkBlue: #301e67;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Arial;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+body {
+  margin: auto;
+  background-color: #faf8f1;
+}
+
+header {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: linear-gradient(to right, var(--black), var(--blue));
+}
+nav {
+  margin-right: 2rem;
+}
+
+header nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+header nav a {
+  color: var(--blue);
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+header nav a:hover,
+header nav a:active,
+header nav a:focus {
+  color: var(--darkBlue);
+}
+
+header nav a:not(:last-child) {
+  margin-right: 20px;
+}
+
+main {
+  margin-left: 200px;
+}
+
+p {
+  line-height: 1.5;
+}
+
+ul {
+  list-style-type: disc;
+  padding: 0;
+  margin: 0;
+}
+
+ol {
+  list-style-type: decimal;
+  margin: 0;
+}
+
+/* Select all section elements and set their background color to light gray */
+body section {
+  background-color: var(--paleBlue);
+}
+
+/* Select all img elements and set their max width to 100% */
+img {
+  max-width: 100%;
+  display: block; /* Make sure the image is a block element */
+  margin: auto; /* Center the image horizontally */
+  border: 2px solid var(--lightBlue); /* Add a border */
+  box-shadow: 3px 3px var(--darkBlue);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: linear-gradient(to right, var(--black), var(--blue));
+  border-top: 2px solid #301e67;
+}
+
+#container {
+  padding-top: 200px;
+}
+
+.myName {
+  font-size: 2rem;
+  font-style: bold;
+  color: #c0eef2;
+}
+
+.navLinks {
+  display: inline-flex;
+  padding: 12px 24px;
+  color: var(--blue);
+  background: var(--paleBlue);
+  border: 2px solid var(--lightBlue);
+  gap: 1rem;
+  border-radius: 24px;
+}
+
+.navlinks:hover {
+  background-color: var(--lightBlue);
+}
+
+.heading {
+  position: relative;
+}
+.heading {
+  transform: translate(10px, 10px);
+}
+.aboutMe .bioText {
+  padding: 4rem;
+  margin: 1rem;
+  border-left: 2px dashed #301e67;
+}
+
+.work .heading {
+  position: relative;
+}
+
+.container {
+  padding: 4rem;
+  margin: 1rem;
+  border-left: 2px dashed #301e67;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
+}
+.container .project:hover .container .project:active .container .project:focus {
+  box-shadow: 2rem 1rem 1rem var(--darkBlue);
+  transform: translateY(-10px);
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+}
+.main-project {
+  font-size: 1.5em;
+}
+.project {
+  margin: 10px;
+}
+
+/* For screens between 768px and 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+  body {
+    font-size: 18px;
+  }
+  header {
+    padding: 0.75rem;
+  }
+  .navLinks {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+  .aboutMe .bioText {
+    padding: 2.5rem;
+  }
+  .container {
+    padding: 2.5rem;
+    margin: 1rem;
+    gap: 1rem;
+  }
+  .project {
+    flex-basis: calc(33.33% - 1rem);
+  }
+  .project:first-child {
+    flex-basis: 100%;
+  }
+  .project img {
+    height: 200px;
+    width: 100%;
+  }
+}
+
+#contactMe {
+  background-color: var(--lightBlue);
+  width: 600px;
+  border-radius: 24px;
+}
+#contactMe .contactList {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+/* For screens larger than 992px */
+@media (min-width: 992px) {
+  body {
+    font-size: 20px;
+  }
+  header {
+    padding: 1rem;
+  }
+  .navLinks {
+    padding: 1.25rem 2.5rem;
+    font-size: 1.1rem;
+  }
+  .aboutMe .bioText {
+    padding: 3rem;
+  }
+  .container {
+    padding: 3rem;
+    margin: 1.5rem;
+    gap: 1.5rem;
+  }
+  .project:first-child {
+    flex-basis: 40%;
+  }
+  .project img {
+    height: 250px;
+    width: 100%;
+  }
+  .projects {
+    display: flex;
+    flex-direction: column;
+  }
+  .main-project {
+    font-size: 1.5em;
+  }
+  .project {
+    margin: 10px;
+  }
+}
