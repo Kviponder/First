@@ -1,4 +1,4 @@
-
+/*root too make access to color scheme easier */
 :root {
   --black: #181823;
   --blue: #537fe7;
@@ -32,7 +32,7 @@ body {
   margin: auto;
   background-color: #faf8f1;
 }
-
+/*Static header with a linear gradient that fits the width of the screen */
 header {
   display: flex;
   position: fixed;
@@ -59,7 +59,7 @@ header nav a {
   text-decoration: none;
   transition: color 0.2s ease-in-out;
 }
-
+/*Psueod elements added to add interactivity and functionality*/
 header nav a:hover,
 header nav a:active,
 header nav a:focus {
@@ -99,7 +99,7 @@ img {
   border: 2px solid var(--lightBlue); 
   box-shadow: 3px 3px var(--darkBlue);
 }
-
+/*footer follows the same gradient as header and covers the width of the page  */
 footer {
   display: flex;
   justify-content: center;
@@ -136,6 +136,7 @@ footer {
 .heading {
   position: relative;
 }
+/*Attempt to move headings, to my grader: please let me know what I did wrong or what I could do instead*/
 .heading {
   transform: translate(10px, 10px);
 }
@@ -158,6 +159,7 @@ footer {
   justify-content: space-between;
   
 }
+/*root too make access to color scheme easier */
 .container .project:hover .container .project:active .container .project:focus {
   box-shadow: 2rem 1rem 1rem var(--darkBlue);
   transform: translateY(-10px);
@@ -177,8 +179,32 @@ footer {
 .project {
   margin: 10px;
 }
-
+/*rdiv element to isolate contact list within footer to give it its own container */
+div {
+  background-color: var(--lightBlue);
+  width: 600px;
+  border: 2px solid var(--black);
+  border-radius: 24px;
+}
+.contactTitle {
+  font-style: bold;
+  text-align: center;
+}
+.contactList {
+  display: flex;
+  justify-content: center;
+}
+.contactList ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+.contactList ul ol {
+  margin: 0 10px;
+}
+/*Various media queries accomadting four different screen sizes to ensure page is responsive */
 @media screen and (max-width: 576px) {
+  /*main element altered in some queiries to charge left margin so page doesnt look awkward with resposive transition */
  main {
   margin-left: 0px;
  }
@@ -218,6 +244,9 @@ footer {
   @media screen and (min-width: 769px) and (max-width: 992px) {
   header {
   height: 100px;
+  }
+  main {
+    margin-left: 45px;
   }
   .myName {
   font-size: 1.4rem;
